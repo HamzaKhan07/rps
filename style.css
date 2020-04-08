@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: rgb(244,254,254);
+    color: rgb(35,35,35);
+}
+.score{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    height: 20vh;
+    align-items: center;
+    justify-content: space-around;
+}
+.score p{
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    font-size: 25px;
+}
+.PlayerScore h2{
+    font-weight: 400;
+}
+.CompScore h2{
+    font-weight: 400;
+}
+.intro{
+    width: 90%;
+    height: 50vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column; 
+    /*opacity: 0;*/
+    transition: opacity 0.5s ease;
+}
+.intro button{
+    width: 150px;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 15px;
+    background-color: rgb(78,240,82);
+    border: none;
+    cursor: pointer;
+}
+.main{
+    position: absolute;
+    width: 90%;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: opacity 0.5s ease 0.5s;
+    
+}
+.main h1{
+    text-align: center;
+    font-weight: 500;
+}
+.main .hands{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px 0px 0px;
+}
+.main .butn{
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin: auto;
+}
+.main .butn button{
+    width: 130px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 15px;
+    background-color: rgb(78,240,82);
+    border: none;
+    cursor: pointer;
+}
+.main .hands .playerHand{
+    transform: rotateY(-180deg);
+}
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+div.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
+@keyframes shakePlayer{
+    0%{
+        transform: rotateY(-180deg) translateY(0px);
+    }
+    10%{
+        transform: rotateY(-180deg) translateY(-50px);
+    }
+    20%{
+        transform: rotateY(-180deg) translateY(0px);
+    }
+    30%{
+        transform: rotateY(-180deg) translateY(-50px);
+    }
+    40%{
+        transform: rotateY(-180deg) translateY(0px);
+    }
+    50%{
+        transform: rotateY(-180deg) translateY(-50px);
+    }
+    60%{
+        transform: rotateY(-180deg) translateY(0px);
+    }
+    70%{
+        transform: rotateY(-180deg) translateY(-50px);
+    }
+    80%{
+        transform: rotateY(-180deg) translateY(0px);
+    }
+}
+
+@keyframes shakeCpu{
+    0%{
+        transform: translateY(0px);
+    }
+    10%{
+        transform: translateY(-50px);
+    }
+    20%{
+        transform: translateY(0px);
+    }
+    30%{
+        transform: translateY(-50px);
+    }
+    40%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+    60%{
+        transform: translateY(0px);
+    }
+    70%{
+        transform: translateY(-50px);
+    }
+    80%{
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 400px)
+{
+    .main{
+        margin-top: 10px;
+    }
+    .intro h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    .intro button{
+        width: 120px;
+        height: 50px;
+    }
+    .butn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        height: 180px;
+    }
+    .PlayerScore h2{
+        font-size: 20px;
+    }
+    .CompScore h2{
+        font-size: 20px;
+    }
+    .PlayerScore p{
+        font-size: 20px;
+    }
+    .CompScore p{
+        font-size: 20px;
+    }
+}
+@media (max-width: 650px)
+{
+    .main{
+        margin-top: 50px;
+    }
+    .butn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        height: 180px;
+    }
+}
